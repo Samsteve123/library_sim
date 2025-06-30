@@ -1,6 +1,6 @@
 import sqlite3
 
-DB_PATH = "book_borrowing.db"
+DB_PATH = "library_inventory.db"
 
 def get_connection():
     return sqlite3.connect(DB_PATH)

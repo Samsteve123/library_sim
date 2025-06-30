@@ -12,6 +12,10 @@ def add_user(name):
     with get_connection() as conn:
         conn.execute("INSERT INTO users (name) VALUES (?)", (name,))
 
+def remove_user(name):
+    with get_connection() as conn:
+        conn.execute("DELETE FROM users WHERE  name=(?)", [name])
+
 
 # def checkout_book(title, author):
 #     with get_connection() as conn:

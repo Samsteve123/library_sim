@@ -3,7 +3,7 @@ from db_util import initialize_database
 import os
 
 if __name__ == "__main__":
-    if not os.path.exists("book_borrowing.db"):
+    if not os.path.exists("library_inventory.db"):
         initialize_database()
     while(True):
         print("What would you like to do?:")
@@ -24,5 +24,9 @@ if __name__ == "__main__":
             name = input("name:")
             add_user(name)
             print("user added")
+        elif response == "remove user":
+            name = input("name:")
+            remove_user(name)
+            print("user removed")
         else:
             print("Option not recognized.")
