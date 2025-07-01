@@ -6,8 +6,7 @@ if __name__ == "__main__":
     if not os.path.exists("library_inventory.db"):
         initialize_database()
     while(True):
-        print("What would you like to do?:")
-        response = input("add or delete?:")
+        response = input("What would you like to do?:")
         if response == "add":
             title = input("Title: ")
             author = input("Author: ")
@@ -15,8 +14,7 @@ if __name__ == "__main__":
             print("Book added.")
         elif response == "delete":
             title = input("Title: ")
-            author = input("Author: ")
-            remove_book(title, author)
+            remove_book(title)
             print("Book deleted")
         elif response == "quit":
             exit()
@@ -28,5 +26,8 @@ if __name__ == "__main__":
             name = input("name:")
             remove_user(name)
             print("user removed")
+        elif response == "search":
+            title = input("Title:")
+            print(search_book(title))
         else:
             print("Option not recognized.")

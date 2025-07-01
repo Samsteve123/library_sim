@@ -2,7 +2,7 @@ CREATE TABLE books (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
     author TEXT NOT NULL,
-    num_copies INTEGER NOT NULL
+    num_copies INTEGER DEFAULT 0
 );
 
 CREATE TABLE users (
