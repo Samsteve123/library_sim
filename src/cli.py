@@ -29,5 +29,8 @@ if __name__ == "__main__":
         elif response == "search":
             title = input("Title:")
             print(search_book(title))
+        elif response == "all books":
+            for entry in list_all_books():
+                print(entry)
         else:
             print("Option not recognized.")
